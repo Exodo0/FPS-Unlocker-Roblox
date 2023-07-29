@@ -42,7 +42,7 @@ if not exist "%folder%\ClientSettings" (
 
 cls 
 
-powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubuseFlagsntent.com/Exodo0/Unlocker-Roblox/main/AutoUpdater.cmd' -OutFile '%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Flags-AutoUpdater.bat'"
+powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Exodo0/Unlocker-Roblox/main/AutoUpdater.cmd' -OutFile '%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Flags-AutoUpdater.bat'"
 if %errorlevel% EQU 0 (
     echo Flags Auto-Updater downloaded and installed successfully!
 ) else (
@@ -55,7 +55,7 @@ echo Downloading ClientAppSettings.json file...
 echo.
 echo.
 
-powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubuseFlagsntent.com/Exodo0/Unlocker-Roblox/main/ClientAppSettings.json' -OutFile '%folder%\ClientSettings\ClientAppSettings.json'"
+powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Exodo0/Unlocker-Roblox/main/ClientAppSettings.json' -OutFile '%folder%\ClientSettings\ClientAppSettings.json'"
 if %errorlevel% EQU 0 (
     echo ClientAppSettings.json downloaded successfully!
     echo.

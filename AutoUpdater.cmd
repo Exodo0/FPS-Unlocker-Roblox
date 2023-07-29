@@ -26,7 +26,7 @@ if not exist "%folder%\ClientSettings" (
 )
 
 echo Downloading ClientAppSettings.json file...
-powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubuseFlagsntent.com/Exodo0/Unlocker-Roblox/main/ClientAppSettings.json' -OutFile '%folder%\ClientSettings\ClientAppSettings.json'"
+powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Exodo0/Unlocker-Roblox/main/ClientAppSettings.json' -OutFile '%folder%\ClientSettings\ClientAppSettings.json'"
 if %errorlevel% EQU 0 (
     echo ClientAppSettings.json downloaded successfully!
     echo.
