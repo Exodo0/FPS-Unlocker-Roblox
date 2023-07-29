@@ -1,19 +1,22 @@
 @echo off
 
 echo.
+echo ===================================================
 echo Flags was created and is maintained by Egologic.
 echo (C) Egologic 2022 - Present, All Rights Reserved.
+echo ===================================================
 echo.
 
 echo.
 echo Starting Flags installation...
 echo.
 
-REM Pedir confirmación del usuario
+REM Pedir confirmación al usuario
 choice /M "Do you want to update Flags every time you start your computer?"
 
 IF ERRORLEVEL 2 GOTO SkipUpdate
 
+REM Obtener la ruta de instalación actual de Flags
 for /d %%i in ("%localappdata%\Roblox\Versions\*") do (
     if exist "%%i\RobloxPlayerBeta.exe" (
         set "folder=%%i"
@@ -40,8 +43,9 @@ if not exist "%folder%\ClientSettings" (
     mkdir "%folder%\ClientSettings"
 )
 
-cls 
+cls
 
+echo Downloading and installing Flags Auto-Updater...
 powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Exodo0/Unlocker-Roblox/main/AutoUpdater.cmd' -OutFile '%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Flags-AutoUpdater.bat'"
 if %errorlevel% EQU 0 (
     echo Flags Auto-Updater downloaded and installed successfully!
@@ -52,7 +56,6 @@ if %errorlevel% EQU 0 (
 echo.
 
 echo Downloading ClientAppSettings.json file...
-echo.
 echo.
 
 powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Exodo0/Unlocker-Roblox/main/ClientAppSettings.json' -OutFile '%folder%\ClientSettings\ClientAppSettings.json'"

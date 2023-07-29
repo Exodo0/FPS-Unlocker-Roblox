@@ -1,22 +1,23 @@
 @echo off
 
+REM Buscar la ruta de instalación actual de Roblox
 for /d %%i in ("%localappdata%\Roblox\Versions\*") do (
     if exist "%%i\RobloxPlayerBeta.exe" (
-        set folder=%%i
+        set "folder=%%i"
         goto :NextStep
     )
 )
 
 for /d %%i in ("C:\Program Files (x86)\Roblox\Versions\*") do (
     if exist "%%i\RobloxPlayerBeta.exe" (
-        set folder=%%i
+        set "folder=%%i"
         goto :NextStep
     )
 )
 
 for /d %%i in ("C:\Program Files\Roblox\Versions\*") do (
     if exist "%%i\RobloxPlayerBeta.exe" (
-        set folder=%%i
+        set "folder=%%i"
         goto :NextStep
     )
 )
@@ -32,8 +33,8 @@ if exist "%folder%\ClientSettings\ClientAppSettings.json" (
 )
 
 echo.
-echo.
+echo ===================================================
 echo THANK YOU FOR USING Flags!
-echo.
+echo ===================================================
 echo.
 echo Press any key to continue... & pause >nul

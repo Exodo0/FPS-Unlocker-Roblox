@@ -1,7 +1,9 @@
 @echo off
 
 echo.
+echo ===================================================
 echo Flags Auto-Updater
+echo ===================================================
 echo.
 
 REM Verificar si existe la carpeta de instalación de Flags
@@ -25,7 +27,10 @@ if not exist "%folder%\ClientSettings" (
     mkdir "%folder%\ClientSettings"
 )
 
+echo.
 echo Downloading ClientAppSettings.json file...
+echo.
+
 powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Exodo0/Unlocker-Roblox/main/ClientAppSettings.json' -OutFile '%folder%\ClientSettings\ClientAppSettings.json'"
 if %errorlevel% EQU 0 (
     echo ClientAppSettings.json downloaded successfully!
@@ -36,6 +41,7 @@ if %errorlevel% EQU 0 (
     echo.
     echo Flags Auto-Update: Update failed!
 )
-echo. ClientSettings Updated....
+echo.
+echo ClientSettings Updated....
 echo.
 echo Press any key to continue... & pause >nul
