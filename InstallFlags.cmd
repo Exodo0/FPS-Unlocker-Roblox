@@ -55,7 +55,6 @@ if %errorlevel% EQU 0 (
 
 echo.
 
-:DownloadClientSettings
 echo Downloading ClientAppSettings.json file...
 echo.
 
@@ -89,6 +88,4 @@ echo 1. Run this script every time there is an update when Roblox updates!
 echo.
 echo 2. To uninstall Flags at any time, run UninstallFlags.cmd!
 echo.
-
-REM Descargar ClientAppSettings.json incluso si no se actualiza
-goto DownloadClientSettings
+echo Press any key to continue... & pause >nul
