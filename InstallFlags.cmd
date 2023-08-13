@@ -15,8 +15,22 @@ REM Pedir confirmación al usuario
 choice /M "Do you want to update Flags every time you start your computer?"
 
 IF ERRORLEVEL 2 GOTO SkipUpdate
+IF ERRORLEVEL 1 GOTO ContinueInstall
 
-REM Obtener la ruta de instalación actual de Flags
+:SkipUpdate
+echo.
+echo Flags installation skipped. You can manually run the script to update.
+echo.
+echo NOTE:
+echo.
+echo 1. Run this script every time there is an update when Roblox updates!
+echo.
+echo 2. To uninstall Flags at any time, run UninstallFlags.cmd!
+echo.
+
+:ContinueInstall
+
+REM 
 for /d %%i in ("%localappdata%\Roblox\Versions\*") do (
     if exist "%%i\RobloxPlayerBeta.exe" (
         set "folder=%%i"
@@ -43,14 +57,18 @@ if not exist "%folder%\ClientSettings" (
     mkdir "%folder%\ClientSettings"
 )
 
+
 cls
 
-echo Downloading and installing Flags Auto-Updater...
-powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Exodo0/Unlocker-Roblox/main/AutoUpdater.cmd' -OutFile '%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Flags-AutoUpdater.bat'"
-if %errorlevel% EQU 0 (
-    echo Flags Auto-Updater downloaded and installed successfully!
-) else (
-    echo Failed to download Flags Auto-Updater.
+REM El código de descarga e instalación del AutoUpdater solo se ejecuta si el usuario no eligió saltar la instalación
+if %ERRORLEVEL% NEQ 2 (
+    echo Downloading and installing Flags Auto-Updater...
+    powershell.exe -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Exodo0/Unlocker-Roblox/main/AutoUpdater.cmd' -OutFile '%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Flags-AutoUpdater.bat'"
+    if %errorlevel% EQU 0 (
+        echo Flags Auto-Updater downloaded and installed successfully!
+    ) else (
+        echo Failed to download Flags Auto-Updater.
+    )
 )
 
 echo.
@@ -77,15 +95,3 @@ echo 2. To uninstall Flags at any time, run Flags-Uninstaller.cmd!
 echo.
 echo Press any key to continue... & pause >nul
 goto :EOF
-
-:SkipUpdate
-echo.
-echo Flags installation skipped. You can manually run the script to update.
-echo.
-echo NOTE:
-echo.
-echo 1. Run this script every time there is an update when Roblox updates!
-echo.
-echo 2. To uninstall Flags at any time, run UninstallFlags.cmd!
-echo.
-echo Press any key to continue... & pause >nul
