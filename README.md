@@ -19,12 +19,27 @@ To get started, please follow these steps:
 
 6. If prompted, decide whether you want to install the AutoUpdater. You can choose to skip this step if you prefer.
 
-7. After the installation is complete, you're all set! You can run 'Flags-Uninstaller.cmd' at any time to uninstall Flags.
+7. After the installation is complete, you're all set! You can run 'UninstallFlags.cmd' at any time to uninstall Flags.
 
-Important Notes:
+## Important Notes:
 - Make sure you have an active internet connection during installation for downloading necessary files.
 - contact me support.
 - Discord: Egologic
+
+## Some things Flags currently does::
+- Unlocks FPS
+- Optimizes Caching
+- Optimizes Graphics
+- Optimizes Textures
+- Increases user privacy
+- Disables Crashpad / Backtrace crash metrics
+- Disables a large portion of client telemetry
+- Disables AbuseReportScreenshot
+- Enables font and texture item preloading
+- Enables FULL graphics quality options (21 instead of 10!)
+- Enables QuickGameLaunch
+- Enables ParallelHumanoidManager
+- Enables BatchAssetApi
 
 Thank you for using Flags!
 We hope you enjoy the enhanced Roblox experience.
