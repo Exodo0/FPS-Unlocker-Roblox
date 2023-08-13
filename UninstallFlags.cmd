@@ -22,11 +22,6 @@ for /d %%i in ("C:\Program Files\Roblox\Versions\*") do (
     )
 )
 
-REM Eliminar el auto-actualizador de shell:startup
-if exist "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Flags-AutoUpdater.bat" (
-    del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Flags-AutoUpdater.bat"
-)
-
 :NextStep
 if exist "%folder%\ClientSettings\ClientAppSettings.json" (
     del "%folder%\ClientSettings\ClientAppSettings.json"
@@ -34,7 +29,9 @@ if exist "%folder%\ClientSettings\ClientAppSettings.json" (
 
 echo.
 echo ===================================================
-echo THANK YOU FOR USING Flags!
+
+echo Thanks for using Flags!
+
 echo ===================================================
 echo.
 echo Press any key to continue... & pause >nul
