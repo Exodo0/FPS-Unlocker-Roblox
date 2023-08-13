@@ -1,5 +1,5 @@
 ===========================================
-#Welcome to Flags Installation Guide
+# Welcome to Flags Installation Guide
 ===========================================
 
 Thank you for choosing Flags!
