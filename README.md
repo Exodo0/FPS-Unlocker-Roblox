@@ -7,7 +7,7 @@ Thank you for choosing Flags!
 To get started, please follow these steps:
 
 1. Download the latest release from the following link:
-   [Download Latest Release]([https://github.com/Exodo0/Unlocker-Roblox/releases/tag/Releases])
+  [Download Latest Release](https://github.com/Exodo0/Unlocker-Roblox/releases/tag/Releases)
 
 2. Once the download is complete, extract the contents to a folder of your choice.
 
