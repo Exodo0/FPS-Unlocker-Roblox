@@ -17,9 +17,7 @@ To get started, please follow these steps:
 
 5. The installation script will guide you through the process. Please read and follow the on-screen instructions carefully.
 
-6. If prompted, decide whether you want to install the AutoUpdater. You can choose to skip this step if you prefer.
-
-7. After the installation is complete, you're all set! You can run 'UninstallFlags.cmd' at any time to uninstall Flags.
+6. After the installation is complete, you're all set! You can run 'UninstallFlags.cmd' at any time to uninstall Flags.
 
 ## Important Notes:
 - Make sure you have an active internet connection during installation for downloading necessary files.
