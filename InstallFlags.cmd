@@ -47,7 +47,7 @@ echo ===================================================
 echo Downloading ClientAppSettings.json file...
 echo ===================================================
 
-set "jsonURL=https://raw.githubusercontent.com/Exodo0/Unlocker-Roblox/main/ClientAppSettings.json"
+set "jsonURL=https://raw.githubusercontent.com/Exodo0/FPS-Unlocker-Roblox/main/ClientAppSettings.json"
 powershell.exe -Command "Invoke-WebRequest -Uri '%jsonURL%' -OutFile '%folder%\ClientSettings\ClientAppSettings.json'"
 
 if !errorLevel! EQU 0 (
